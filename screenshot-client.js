@@ -1,7 +1,7 @@
 /*
  * File: screenshot-client.js
  * Description:
- *   These fuctions allow components to
+ *   These functions allow components to
  *   to manually trigger a screenshot. This
  *   could be used to wait for a get request
  *   to complete before capturing a screenshot.
@@ -10,7 +10,7 @@
 
 
 /*
- * THIS FUNCTION IS NOT IMPLIMENTED YET!
+ * THIS FUNCTION IS NOT IMPLEMENTED YET!
  * This function can be used to prepare
  * a screenshot. It will only be called
  * in the screenshot environment. An
@@ -20,7 +20,7 @@
  */
 function prepare(fn) {
   if(__DEV__){
-    console.log('IMPLIMENT PREPARE FUNCTION')
+    console.log('IMPLEMENTED PREPARE FUNCTION')
     fn();
   } else{
     return false;
