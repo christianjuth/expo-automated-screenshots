@@ -1,0 +1,19 @@
+{
+  "devices": [
+    "iPhone SE",
+    "iPhone 8",
+    "iPhone X"
+  ],
+  "screenshots": {
+    "static-text": "/static/text",
+    "static-list": "/static/list",
+    "dynamic-list": {
+      "url": "/dynamic/list",
+      "captureEvent": "manual"
+    },
+    "dynamic-text": {
+      "url": "/dynamic/text",
+      "captureEvent": "manual"
+    }
+  }
+}
