@@ -1,8 +1,7 @@
 
 # Expo Automated Screenshots
 
-This is a mock of what automated screenshots might look like in Expo. I am expo web and puppeteer to capture screenshots. The downside to this approach is that iOS and Android screenshots are actually rendering the web version of the app. This is not ideal, but I think it's a good first step.
-
+This is an example of what automated screenshots might look like using Expo. I am using expo web and puppeteer to capture screenshots. The downside to this approach is that iOS and Android screenshots are actually rendering the web version of the app. This is not ideal, but I think it's a good first step. Personally I am of the mindset that apps should look the same across platforms, which makes this less of an issue for me, but if you want your app to strictly abide by the Material Design and Cupertino style guides per platform, this approach to capturing screenshots will be less useful to you.
 
 ### Getting Started
 
@@ -18,6 +17,27 @@ npm run screenshot
 # screenshots will appear as ./screenshots/deviceName/screenshotName.png
 ```
 
+### Navigation Setup
+
+Since screenshots are generated trough the browser, you will need to configure paths for each screen you want to reach. Additionally, I changed `navigation/AppNavigator.web.js` to not use the hash router because that is what I prefer.
+
+```javascript
+const StaticStack = createStackNavigator(
+  {
+    Text: {
+      screen: StaticText,
+      path: 'text'
+    },
+    List: {
+      screen: StaticList,
+      path: 'list'
+    },
+  },
+  config
+);
+StaticStack.path = 'static';
+```
+
 ### Configuration
 
 All options
@@ -27,7 +47,9 @@ All options
   "devices": [
     "iPhone SE",
     "iPhone 8",
-    "iPhone X"
+    "iPhone X",
+    "Pixel 2",
+    "Pixel 2 XL"
   ],
   "screenshots": {
     "screen-one": {

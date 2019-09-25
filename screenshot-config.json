@@ -2,7 +2,9 @@
   "devices": [
     "iPhone SE",
     "iPhone 8",
-    "iPhone X"
+    "iPhone X",
+    "Pixel 2",
+    "Pixel 2 XL"
   ],
   "screenshots": {
     "static-text": "/static/text",
