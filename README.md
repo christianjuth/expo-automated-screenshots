@@ -3,6 +3,10 @@
 
 This is an example of what automated screenshots might look like using Expo. I am using expo web and puppeteer to capture screenshots. The downside to this approach is that iOS and Android screenshots are actually rendering the web version of the app. This is not ideal, but I think it's a good first step. Personally I am of the mindset that apps should look the same across platforms, which makes this less of an issue for me, but if you want your app to strictly abide by the Material Design and Cupertino style guides per platform, this approach to capturing screenshots will be less useful to you.
 
+**My goal ultimately is to speed up my workflow to ludicrous**
+
+![ludicrous](https://media.giphy.com/media/ZfNGHnl4eZQRy/giphy.gif)
+
 ### Getting Started
 
 For now, you have to manually start expo web. Puppeteer will default to port 19006.
