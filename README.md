@@ -1,11 +1,17 @@
 
 # Expo Automated Screenshots
 
-This is an example of what automated screenshots might look like using Expo. I am using expo web and puppeteer to capture screenshots. The downside to this approach is that iOS and Android screenshots are actually rendering the web version of the app. This is not ideal, but I think it's a good first step. Personally I am of the mindset that apps should look the same across platforms, which makes this less of an issue for me, but if you want your app to strictly abide by the Material Design and Cupertino style guides per platform, this approach to capturing screenshots will be less useful to you.
+This is an example of what automated screenshots might look like using Expo. I am using expo web and puppeteer to capture screenshots. The downside to this approach is that iOS and Android screenshots are actually rendering the web version of the app. This is not ideal, but I think it's a good first step. Personally, I am of the mindset that apps should look the same across platforms, which makes this less of an issue for me. However, if you want your app to strictly abide by the Material Design and Cupertino style guides per platform, this approach to capturing screenshots will be less useful to you.
+
+I decided to commit the screenshots I auto-generated in case you do not want to clone this repo and run the code yourself. Otherwise, feel free to delete `/screenshots` and `npm run screenshots`.
+
+**My goal ultimately is to speed up my workflow to ludicrous**
+
+![ludicrous](https://media.giphy.com/media/ZfNGHnl4eZQRy/giphy.gif)
 
 ### Getting Started
 
-For now, you have to manually start expo web. Puppeteer will default to port 19006.
+For now, you have to start expo web manually. Puppeteer will default to port 19006.
 
 ```bash
 # start expo web
@@ -19,7 +25,7 @@ npm run screenshot
 
 ### Navigation Setup
 
-Since screenshots are generated trough the browser, you will need to configure paths for each screen you want to reach. Additionally, I changed `navigation/AppNavigator.web.js` to not use the hash router because that is what I prefer.
+Since screenshots are generated through the browser, you will need to configure paths for each screen you want to reach. Additionally, I changed `navigation/AppNavigator.web.js` to not use the hash router because that is what I prefer.
 
 ```javascript
 const StaticStack = createStackNavigator(
@@ -71,7 +77,7 @@ All options
 
 
 ### Manual Capture
-By default the screenshot will be captured once the page finishes loading, or rather once the network traffic idles (using puppeteer networkidle2). If however you set captureEvent to manual, the screenshot will not be capture until you manually trigger it (assuming you do so before within the specified timeout).
+By default, the screenshot will be captured once the page finishes loading, or rather once the network traffic idles (using puppeteer networkidle2). If however, you set captureEvent to manual, the screenshot will not be capture until you manually trigger it (assuming you do so before within the specified timeout).
 
 ```javascript
 // manual capture
@@ -102,3 +108,4 @@ class DynamicScreen extends React.PureComponent{
   }
 }
 ```
+  
