@@ -9,6 +9,10 @@ I decided to commit the screenshots I auto-generated in case you do not want to 
 
 ![ludicrous](https://media.giphy.com/media/ZfNGHnl4eZQRy/giphy.gif)
 
+**My goal ultimately is to speed up my workflow to ludicrous**
+
+![ludicrous](https://media.giphy.com/media/ZfNGHnl4eZQRy/giphy.gif)
+
 ### Getting Started
 
 For now, you have to start expo web manually. Puppeteer will default to port 19006.
